@@ -5,12 +5,12 @@ package assignment.vn.kotlin.model
  */
 
 class Book {
-    var id = ""
+    var id: Int? = null
     var title = ""
     var publishDate = ""
     var imgUrl = ""
 
-    constructor(id: String, title: String, publishDate: String, imgUrl: String) {
+    constructor(id: Int, title: String, publishDate: String, imgUrl: String) {
         this.id = id
         this.title = title
         this.publishDate = publishDate
