@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         context?.let {
             string = context!!.resources.getString(R.string.demo)
+            //More
         }
 
         textView?.text = string ?: "Hello Kotlin" // string == null ? "Hello Kotlin" : string
