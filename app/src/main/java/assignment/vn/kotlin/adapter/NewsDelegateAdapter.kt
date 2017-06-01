@@ -28,12 +28,13 @@ class NewsDelegateAdapter : ViewTypeDelegateAdapter {
     class NewsViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
             parent.inflate(R.layout.news_item)) {
         fun bind(item: RedditNewsItem) = with(itemView) {
-            Glide.with(context).load(item.url).into(img_thumbnail)
-            title?.text = item?.title ?: ""
-            description?.text = item?.title ?: ""
-            author?.text = item?.author ?: ""
+//            Glide.with(context).load(item.url).into(img_thumbnail)
+            title?.text = item?.title
+            description?.text = item?.title
+            author?.text = item?.author
             time?.text = item.created.getFriendlyTime()
             comments?.text = "${item.numComments} comments"
+            itemView.setOnClickListener {  }
         }
     }
 }
